@@ -1,0 +1,13 @@
+<h2>Entered Details are</h2>
+<p>
+	Name : <%= @post.name %> <br>
+	Email : <%= @post.email %> <br>
+	Mobile : <%= @post.mobile %> <br>
+	Address : <%= @post.post %> <br>
+</p>
+<span>
+	<%= link_to 'New Post', controller: 'posts', action: 'new' %> 
+</span>
+<span style="padding-left:10px;">
+	<%= link_to 'All Posts', controller: 'posts' %>
+</span>

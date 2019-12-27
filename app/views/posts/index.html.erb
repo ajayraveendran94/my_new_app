@@ -1,0 +1,14 @@
+<h2>All Values</h2>
+<!-- <script>
+	alert("hello");
+</script> -->
+<% @posts.each do|post| %>
+  Name : <%= post.name %> <br>
+  Email : <%= post.email %> <br>
+  Mobile : <%= post.mobile %> <br>
+  Post : "<%= post.post %>"<br>
+  <%= link_to 'Click to get details', post_path(post) %> <br> <br>
+<% end %>
+<span>
+  <%= link_to 'New Post', controller: 'posts', action: 'new' %> 
+</span>
