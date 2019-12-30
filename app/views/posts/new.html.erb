@@ -1,25 +1,6 @@
 <h1>Add Your Post Here</h1>
-<%= form_with scope: :post, url:posts_path, local: true do |f| %>
-<p>
-<%= f.label :name %> <br>
-<%= f.text_field :name %>
-</p>
-<p>
-<%= f.label :email %> <br>
-<%= f.email_field :email %>
-</p>
-<p>
-<%= f.label :mobile %> <br>
-<%= f.text_field :mobile %>
-</p>
-<p>
-<%= f.label :post %> (Minimum 10 Characters)<br>
-<%= f.text_area :post %>
-</p>
-<p>
-<%= f.submit %> 
-</p>
-<% end %>
+<%= render 'post_form' %>
+
 
 <span >
 	<%= link_to 'All Posts', controller: 'posts' %>

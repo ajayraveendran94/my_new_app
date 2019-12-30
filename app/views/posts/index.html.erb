@@ -1,13 +1,16 @@
-<h2>All Values</h2>
+<h2>All Posts</h2>
 <!-- <script>
 	alert("hello");
 </script> -->
 <% @posts.each do|post| %>
-  Name : <%= post.name %> <br>
-  Email : <%= post.email %> <br>
-  Mobile : <%= post.mobile %> <br>
-  Post : "<%= post.post %>"<br>
-  <%= link_to 'Click to get details', post_path(post) %> <br> <br>
+  <!-- Email : <%= post.email %> <br>
+  Mobile : <%= post.mobile %> <br> -->
+  "<%= post.post %>"<br>
+  Post By: <i> <%= post.name %> </i><br>
+
+  <%= link_to 'Click to get details', post_path(post) %> 
+  <%= link_to 'Edit', edit_post_path(post) %>
+  <%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are You Sure'} %><br> <br>
 <% end %>
 <span>
   <%= link_to 'New Post', controller: 'posts', action: 'new' %> 
