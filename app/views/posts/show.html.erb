@@ -5,6 +5,11 @@
 	Mobile : <%= @post.mobile %> <br>
 	Address : <%= @post.post %> <br>
 </p>
+<h2>Comments</h2>
+<%= render @post.comments %>
+ 
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
 <span>
 	<%= link_to 'New Post', controller: 'posts', action: 'new' %> 
 </span>
